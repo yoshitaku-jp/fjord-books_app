@@ -1,0 +1,34 @@
+ja:
+  books:
+    index:
+      books: "書庫"
+      title: "タイトル"
+      memo: "メモ"
+      author: "著者"
+      picture: "画像"
+      new: "新しく本を追加する"
+      show: "詳細"
+      edit: "編集"
+      del: "削除"
+    show:
+      books: "書庫"
+      title: "タイトル"
+      memo: "メモ"
+      author: "著者"
+      picture: "画像"
+      edit: "編集"
+      back: "戻る"
+    new:
+      New Book: "新しい本"
+      back: "戻る"
+    edit:
+      Editing Book: "本の編集"
+      show: "詳細"
+      back: "戻る"
+  activerecord:
+    attributes:
+      book:
+        title: "タイトル"
+        memo: "メモ"
+        author: "著者"
+        picture: "画像"
