@@ -32,3 +32,7 @@ ja:
         memo: "メモ"
         author: "著者"
         picture: "画像"
+  helpers:
+    submit:
+      create: "追加"
+      update: "更新"
