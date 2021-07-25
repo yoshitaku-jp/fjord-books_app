@@ -63,5 +63,5 @@ gem 'kaminari'
 gem 'devise'
 
 # add
-
+gem 'devise-i18n'
 gem 'dotenv-rails'
