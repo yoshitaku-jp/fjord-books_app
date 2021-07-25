@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :postalcode, :address, presence: true
-  validates :selfintroduction, length: { maximum: 200 }
+  #  validates :postalcode, :address, presence: true
+  #  validates :selfintroduction, length: { maximum: 200 }
 end
