@@ -61,3 +61,7 @@ gem 'carrierwave'
 gem 'kaminari'
 
 gem 'devise'
+
+# add
+
+gem 'dotenv-rails'
