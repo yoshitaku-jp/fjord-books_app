@@ -33,3 +33,7 @@ ja:
     submit:
       create: "追加"
       update: "更新"
+  notice:
+    create: 新しい本を追加しました！
+    update: 本を編集しました！
+    destroy: 本を削除しました！
