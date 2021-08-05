@@ -2,14 +2,11 @@ ja:
   books:
     index:
       books: "書庫"
-      title: "タイトル"
-      memo: "メモ"
-      author: "著者"
-      picture: "画像"
       new: "新しく本を追加する"
       show: "詳細"
       edit: "編集"
       del: "削除"
+      confirm: "削除してよろしいですか？"
     show:
       books: "書庫"
       title: "タイトル"
