@@ -63,4 +63,5 @@ gem 'kaminari'
 gem 'devise'
 
 gem 'devise-i18n'
-gem 'dotenv-rails'
+
+gem 'letter_opener_web'
