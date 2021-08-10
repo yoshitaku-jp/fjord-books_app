@@ -5,7 +5,4 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable
-
-  #  validates :postalcode, :address, presence: true
-  #  validates :selfintroduction, length: { maximum: 200 }
 end
