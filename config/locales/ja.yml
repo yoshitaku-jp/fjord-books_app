@@ -222,6 +222,7 @@ ja:
       logout: ログアウト
       password_forget: パスワードを忘れましたか？
       send_mail: "パスワードを再設定する"
+      now_login: ログイン中
     pagination:
       first: "最初"
       last: "最後"
