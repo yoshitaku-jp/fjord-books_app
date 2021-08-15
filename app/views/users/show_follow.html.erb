@@ -1,6 +1,6 @@
 <% provide(:title, @title) %>
 <h1><%= @user.name %></h1>
-<span><%= link_to "view my profile", @user %></span>
+<span><%= link_to t('views.common.profile'), @user %></span>
 <%= render 'stats' %>
 <% if @users.any? %>
     <% @users.each do |user| %>
