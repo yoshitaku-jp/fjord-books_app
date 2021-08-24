@@ -5,7 +5,7 @@
   <% else %>
     <%= comment.user.email %>
   <% end %>
-  <%= comment.created_at %>
+  <%= comment.created_at.in_time_zone('Tokyo') %>
 <% end %>
 <%= form_with model: [commentable, Comment.new] do |form| %>
   <%= form.text_area :body %>
