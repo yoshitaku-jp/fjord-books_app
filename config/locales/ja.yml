@@ -221,6 +221,8 @@ ja:
       profile: "プロフィールへ"
       following: "%{count} フォロー中"
       follower: "%{count} フォロワー"
+      follow: フォローする
+      unfollow: フォローを外す
     pagination:
       first: "最初"
       last: "最後"
@@ -232,6 +234,8 @@ ja:
       notice_create: "%{name}が作成されました。"
       notice_update: "%{name}が更新されました。"
       notice_destroy: "%{name}が削除されました。"
+      following_title: "フォロワー一覧"
+      follower_title: "フォロー一覧"
   layouts:
     application:
       menu: メニュー
