@@ -9,6 +9,11 @@
   <strong>Content:</strong>
   <%= @report.content %>
 </p>
+<p>
+  <strong>Created_at:</strong>
+  <%= @report.created_at.in_time_zone('Tokyo') %>
+</p>
+
 <% if current_user == @report.user %>
   <%= link_to 'Edit', edit_report_path(@report) %> |  
 <% end %>
