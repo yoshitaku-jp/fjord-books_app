@@ -1,5 +1,10 @@
 <% commentable.comments.each do |comment| %>
   <%= comment.body %>
+  <% if comment.user.name? %>
+    <%= comment.user.name %>
+  <% else %>
+    <%= comment.user.email %>
+  <% end %>
 <% end %>
 <%= form_with model: [commentable, Comment.new] do |form| %>
   <%= form.text_area :body %>
