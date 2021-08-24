@@ -1,0 +1,23 @@
+<% provide(:title, @title) %>
+<h1><%= @user.name %></h1>
+<span><%= link_to t('views.common.profile'), @user %></span>
+<%= render 'stats' %>
+<% if @users.any? %>
+    <% @users.each do |user| %>
+        <% if user.avatar.attached? %>
+            <%= image_tag user.avatar.variant(resize_to_fill: [30, 30])%>
+        <% end %>
+    <% end %>
+<% end %>
+
+<h3><%= @title %></h3>
+<% if @users.any? %>
+    <% @users.each do |user| %>
+        <% if user.avatar.attached? %>
+            <%= image_tag user.avatar.variant(resize_to_fill: [30, 30])%>
+        <% end %>
+        <%= user.name %>
+        <%= link_to t('views.common.show'), user %>
+    <% end %>
+    <%= paginate @users %>
+<% end %>

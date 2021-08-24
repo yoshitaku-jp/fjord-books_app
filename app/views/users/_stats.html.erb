@@ -1,0 +1,6 @@
+<a href="<%= following_user_path(@user) %>">
+    <%= t('views.common.following', count: @user.following.count) %>
+</a> |
+<a href="<%= followers_user_path(@user) %>">
+    <%= t('views.common.follower', count: @user.followers.count) %>
+</a>
