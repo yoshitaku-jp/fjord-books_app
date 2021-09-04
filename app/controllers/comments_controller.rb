@@ -8,33 +8,24 @@ class CommentsController < ApplicationController
     @commentable = resource.singularize.classify.constantize.find(id)
     @comment = @commentable.comments.new(comment_params.merge(user: current_user))
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human) }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    if @comment.save
+      redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human) 
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
   def update
-    respond_to do |format|
-      if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: t('controllers.common.notice_update', name: Comment.model_name.human) }
-        format.json { render :show, status: :ok, location: @comment }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
+    if @comment.update(comment_params)
+      redirect_to @comment, notice: t('controllers.common.notice_update', name: Comment.model_name.human)
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     @comment.destroy
-    respond_to do |format|
-      format.html { redirect_to comments_url, notice: t('controllers.common.notice_destroy', name: Comment.model_name.human) }
-      format.json { head :no_content }
-    end
+    redirect_to comments_url, notice: t('controllers.common.notice_destroy', name: Comment.model_name.human)
   end
 
   private
