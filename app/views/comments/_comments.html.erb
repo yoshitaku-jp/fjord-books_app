@@ -4,11 +4,7 @@
 
 <p>
   <strong><%= Comment.human_attribute_name(:user) %>:</strong>
-  <% if comment.user.name? %>
-  <%= comment.user.name %>
-  <% else %>
-  <%= comment.user.email %>
-  <% end %>
+  <%= name_or_email comment %>
   <strong><%= Comment.human_attribute_name(:created_at) %>:</strong>
   <%= comment.created_at %>
 </p>
