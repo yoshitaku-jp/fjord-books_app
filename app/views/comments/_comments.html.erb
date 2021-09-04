@@ -1,24 +1,24 @@
-  <h2><%= Comment.model_name.human %></h2>
+<h2><%= Comment.model_name.human %></h2>
 
 <% commentable.comments.each do |comment| %>
 
-  <p>
-    <strong><%= Comment.human_attribute_name(:user) %>:</strong>
-    <% if comment.user.name? %>
-      <%= comment.user.name %>
-    <% else %>
-      <%= comment.user.email %>
-    <% end %>
-    <strong><%= Comment.human_attribute_name(:created_at) %>:</strong>
-    <%= l(comment.created_at.in_time_zone('Tokyo'), format: :long) %>
-  </p>
-  <p>
-    <strong><%= Comment.human_attribute_name(:body) %>:</strong>
-    <%= comment.body %>
-  </p>
+<p>
+  <strong><%= Comment.human_attribute_name(:user) %>:</strong>
+  <% if comment.user.name? %>
+  <%= comment.user.name %>
+  <% else %>
+  <%= comment.user.email %>
+  <% end %>
+  <strong><%= Comment.human_attribute_name(:created_at) %>:</strong>
+  <%= l(comment.created_at.in_time_zone('Tokyo'), format: :long) %>
+</p>
+<p>
+  <strong><%= Comment.human_attribute_name(:body) %>:</strong>
+  <%= comment.body %>
+</p>
 
 <% end %>
 <%= form_with model: [commentable, Comment.new] do |form| %>
-  <%= form.text_area :body %>
-  <%= form.submit %>
+<%= form.text_area :body %>
+<%= form.submit %>
 <% end %>
