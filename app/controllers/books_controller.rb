@@ -52,7 +52,7 @@ class BooksController < ApplicationController
   private
 
   def set_book
-    @book = Book.eager_load(comments: :user).order(:created_at).find(params[:id])
+    @book = Book.eager_load(comments: :user).find(params[:id])
   end
 
   def book_params
