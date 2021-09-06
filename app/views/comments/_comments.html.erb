@@ -4,7 +4,7 @@
 
 <p>
   <strong><%= Comment.human_attribute_name(:user) %>:</strong>
-  <%= name_or_email comment %>
+  <%= name_or_email comment.user %>
   <strong><%= Comment.human_attribute_name(:created_at) %>:</strong>
   <%= comment.created_at %>
 </p>

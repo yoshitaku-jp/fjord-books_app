@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 module CommentsHelper
-  def name_or_email(comment)
-    if comment.user.name?
-      comment.user.name
+  def name_or_email(user)
+    if user.name.present?
+      user.name
     else
-      comment.user.email
+      user.email
     end
   end
 end
