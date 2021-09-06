@@ -7,10 +7,8 @@ class BooksController < ApplicationController
     @books = Book.order(:id).page(params[:page])
   end
 
-  def show
-    @book = Book.find(params[:id])
-    @comments = @book.comments.includes(:user).order(created_at: :desc)
-  end
+  def show; end
+
 
   def new
     @book = Book.new

@@ -7,10 +7,8 @@ class ReportsController < ApplicationController
     @reports = Report.order(:id).page(params[:page])
   end
 
-  def show
-    @report = Report.find(params[:id])
-    @comments = @report.comments.includes(:user).order(created_at: :desc)
-  end
+  def show; end
+
 
   def new
     @report = Report.new
