@@ -15,6 +15,6 @@
 
 <% end %>
 <%= form_with model: [commentable, Comment.new] do |form| %>
-<%= form.text_area :body %>
+<%= form.text_area :body, required: true %>
 <%= form.submit %>
 <% end %>
