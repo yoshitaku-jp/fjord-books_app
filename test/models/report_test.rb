@@ -15,5 +15,8 @@ class ReportTest < ActiveSupport::TestCase
   test "created_on" do
     report = reports(:alice)
     assert_equal Date.today, report.created_on
+
+    assert_not_equal Date.today - 1, report.created_on
+    assert_not_equal Date.today + 1, report.created_on
   end
 end
