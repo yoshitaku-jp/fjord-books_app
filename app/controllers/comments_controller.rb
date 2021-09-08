@@ -8,11 +8,8 @@ class CommentsController < ApplicationController
     @commentable = resource.singularize.classify.constantize.find(id)
     @comment = @commentable.comments.new(comment_params.merge(user: current_user))
 
-    if @comment.save
-      redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human) 
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @comment.save!
+    redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human) 
   end
 
   private
