@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  before_action :set_comment, only: %i[update destroy]
 
   def create
     resource, id = request.path.split('/')[1, 2]
@@ -13,10 +12,6 @@ class CommentsController < ApplicationController
   end
 
   private
-
-  def set_comment
-    @comment = Comment.find(params[:id])
-  end
 
   def comment_params
     params.require(:comment).permit(:body)
