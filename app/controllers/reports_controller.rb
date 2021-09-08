@@ -40,7 +40,7 @@ class ReportsController < ApplicationController
   private
 
   def set_report
-    @report = Report.eager_load(comments: :user).find(params[:id])
+    @report = Report.find(params[:id])
   end
 
   def report_params
